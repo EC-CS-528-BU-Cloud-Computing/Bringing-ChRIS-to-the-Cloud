@@ -11,7 +11,8 @@ For our project specifically, the objectives are as follows:
 
 ** **
 ## 2. Users/Personas of the Project
-The users of the ChRIS system are researchers and physicians from hospitals, and ChRIS provides them with the means to abstract the computational resources needed to perform various tasks on medical data.
+The users of the ChRIS system are researchers and physicians from hospitals, and ChRIS provides them with the means to abstract the computational resources needed to perform various tasks on medical data. Instead of spending a lot of time learning computer knowledge, users only need to focus on their own business and get the results they want from the cloud.
+
 
 User characteristics: The users are assumed to have little to no technical knowledge, but have a need to easily and quickly transform medical data in a way that is abstracted away from any underlying hardware. They upload medical data (i.e. X-Rays, clinical data, etc) from their local environment to ChRIS through a REST API and select appropriate analysis functions.
 
