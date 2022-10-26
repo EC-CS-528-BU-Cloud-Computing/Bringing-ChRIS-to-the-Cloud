@@ -1,0 +1,17 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: randomcard
+spec:
+  containers:
+    - name: randomcard
+      image: image-registry.openshift-image-registry.svc:5000/bu-chris-fall2022/randomcard-test
+      command: ["python3","app.py","/outgoing"]
+      volumeMounts:
+      - mountPath: "/outgoing" 
+        name: mypd 
+  restartPolicy: OnFailure
+  volumes:
+    - name: mypd
+      persistentVolumeClaim:
+        claimName: storage-test 
