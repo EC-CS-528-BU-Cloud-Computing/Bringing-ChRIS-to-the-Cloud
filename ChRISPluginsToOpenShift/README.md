@@ -1,6 +1,6 @@
 The YAML files contained within this folder were used to create the components of a simple ChRIS pipeline consisting of a FS plugin (pl-lungs_pnc) and a DS plugin (pl-dcm2niix) on OpenShift.
 
-To create the resources represented by any of the yaml files above, ensure you have downloaded the OpenShift CLI and type the following command into your terminal:
+To create the resources represented by any of the YAML files above, ensure you have downloaded the OpenShift CLI and type the following command into your terminal:
 
 `oc apply -f INSERT_FILENAME`
 
