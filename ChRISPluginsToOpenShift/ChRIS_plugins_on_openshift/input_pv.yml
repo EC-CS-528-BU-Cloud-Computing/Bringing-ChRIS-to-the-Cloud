@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: chris-input-pvc
+  namespace: bu-chris-fall2022
+spec:
+  accessModes:
+    - ReadWriteMany
+  volumeName: chris-input-pv
+  resources:
+    requests:
+      storage: 2Gi

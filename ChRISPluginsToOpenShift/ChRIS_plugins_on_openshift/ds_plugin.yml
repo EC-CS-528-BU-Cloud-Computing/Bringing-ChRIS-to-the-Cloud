@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: chris-ds-plugin
+  namespace: bu-chris-fall2022
+spec:
+  volumes:
+    - name: input-volume
+      persistentVolumeClaim:
+        claimName: test-input-pvc-2
+    - name: output-volume
+      persistentVolumeClaim:
+        claimName: test-output-pvc
+  containers:
+    - name: dcm2niix
+      image: fnndsc/pl-dcm2niix
+      command: ["sh", "-c"]
+      args: 
+        - dcm2niixw /input_path /output_path;
+          echo done;
+      volumeMounts:
+        - name: input-volume
+          mountPath: /input_path
+        - name: output-volume
+          mountPath: /output_path
+  restartPolicy: OnFailure
