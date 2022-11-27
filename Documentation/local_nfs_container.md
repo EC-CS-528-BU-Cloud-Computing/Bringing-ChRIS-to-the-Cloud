@@ -2,7 +2,8 @@
 ## Prerequisites
 1. Have docker running
 2. Have a terminal window open in your home folder
-Also note, all of these steps below were executed on macos Monterey 
+
+Also note, all of the steps below were executed on macos Monterey 
 ## Setting up the NFS Server
 In order to test out the functionality of pfcon and pman on OpenShift, we need a workaround to allow both to interact with storage using NFS. Sincce our project space does not have access to this by default, one of the options was to try and deploy an NFS server inside a container running in the project space, mounting a persistent volume inside of this NFS server container, and then using the server as a shim to get pfcon/pman working. In order to test this out, I tried setting up an NFS server using [this](https://hub.docker.com/r/erichough/nfs-server/) image from the docker hub. 
 To get it setup, first create a docker volume:
