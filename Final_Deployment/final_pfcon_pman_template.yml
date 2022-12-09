@@ -143,7 +143,7 @@ objects:
           serviceAccountName: job-creator
           containers:
             - name: pman-new
-              image: lilloukas/pman:v3
+              image: lilloukas/pman:v4
               ports:
                 - containerPort: 5010
               env:
